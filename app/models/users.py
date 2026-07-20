@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import Column, String, Boolean, Enum
 from sqlalchemy.dialects.sqlite import TEXT
-from db.session import Base
+from app.db.session import Base
 
 
 class User(Base):

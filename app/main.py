@@ -5,12 +5,12 @@ Chovique FastAPI Application Entry Point
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from core.config import get_settings
-from middleware.cors import get_cors_kwargs
-import models.otp  # noqa: F401
-from db.session import engine, Base, SessionLocal
-from repositories.user_repository import seed_superadmin
-from api.v1 import api_router
+from app.core.config import get_settings
+from app.middleware.cors import get_cors_kwargs
+import app.models.otp
+from app.db.session import engine, Base, SessionLocal
+from app.repositories.user_repository import seed_superadmin
+from app.api.v1 import api_router
 
 settings = get_settings()
 

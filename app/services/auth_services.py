@@ -11,11 +11,11 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 import httpx
 
-from core.config import get_settings
-from core.database import hash_password, verify_password, create_access_token
-from models.users import User
-from repositories import user_repository
-from schemas.auth import UserOut, UserProfileOut, AddressOut, AuthResponse, SendOtpResponse, GoogleAuthResponse
+from app.core.config import get_settings
+from app.core.database import hash_password, verify_password, create_access_token
+from app.models.users import User
+from app.repositories import user_repository
+from app.schemas.auth import UserOut, UserProfileOut, AddressOut, AuthResponse, SendOtpResponse, GoogleAuthResponse
 
 def _get_active_settings():
     get_settings.cache_clear()

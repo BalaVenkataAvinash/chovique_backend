@@ -4,7 +4,7 @@ Services call these; no raw SQL anywhere else.
 """
 
 from sqlalchemy.orm import Session
-from models.users import User
+from app.models.users import User
 
 
 def get_by_id(db: Session, user_id: str) -> User | None:

@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime, timezone
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.dialects.sqlite import TEXT
-from db.session import Base
+from app.db.session import Base
 
 
 class OTPRecord(Base):
